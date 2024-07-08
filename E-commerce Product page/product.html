@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Clothing Shop - Products</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Men's Clothing Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <a href="#" onclick="showProductDetails('images/product1.jpg', 'Classic White Shirt', 29.99)">
+                        <img src="images/whiteshirt.jpeg" alt="Classic White Shirt">
+                        <p>Classic White Shirt</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#" onclick="showProductDetails('images/product2.jpg', 'Casual Blue Jeans', 49.99)">
+                        <img src="images/blueJeans.jpeg" alt="Casual Blue Jeans">
+                        <p>Casual Blue Jeans</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#" onclick="showProductDetails('images/product3.jpg', 'Leather Jacket', 119.99)">
+                        <img src="images/leatherjacket.jpeg" alt="Leather Jacket">
+                        <p>Leather Jacket</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#" onclick="showProductDetails('images/product4.jpg', 'Formal Black Suit', 199.99)">
+                        <img src="images/blacksuit.jpeg" alt="Formal Black Suit">
+                        <p>Formal Black Suit</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#" onclick="showProductDetails('images/product5.jpg', 'Denim Jacket', 89.99)">
+                        <img src="images/denimJacket.jpeg" alt="Denim Jacket">
+                        <p>Denim Jacket</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#" onclick="showProductDetails('images/product6.jpg', 'Black T-shirt', 19.99)">
+                        <img src="images/blackTShirt.jpeg" alt="Black T-shirt">
+                        <p>Black T-shirt</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#" onclick="showProductDetails('images/product7.jpg', 'Grey Hoodie', 39.99)">
+                        <img src="images/greyHoodie.jpeg" alt="Grey Hoodie">
+                        <p>Grey Hoodie</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#" onclick="showProductDetails('images/product8.jpg', 'Striped Polo Shirt', 24.99)">
+                        <img src="images/PoloShirt.jpeg" alt="Striped Polo Shirt">
+                        <p>Striped Polo Shirt</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#" onclick="showProductDetails('images/product9.jpg', 'Sweatpants', 29.99)">
+                        <img src="images/SweatPants.jpeg" alt="Sweatpants">
+                        <p>Sweatpants</p>
+                    </a>
+                </div>
+                <div class="product-item">
+                    <a href="#" onclick="showProductDetails('images/product10.jpg', 'Plaid Shirt', 34.99)">
+                        <img src="images/plaidshirt.jpeg" alt="Plaid Shirt">
+                        <p>Plaid Shirt</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Product Image">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p id="price"></p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+    <aside id="cart-sidebar">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </aside>
+</body>
+</html>
